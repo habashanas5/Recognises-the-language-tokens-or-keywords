@@ -1,0 +1,10 @@
+program
+model sequential (test) {
+layer(type= input , in=10 , out=10 , activation = sigmoid)
+layer(type= dense , in=20 , out=20 , activation = tanh)
+layer(type= output , in=30 , out=30 , activation = relu)
+}
+
+train (data="data" , labels="ll" , loss=mse , optimizer=adam , epochs=30 , metrics=[accuracy,recall])
+predict ("testing") 
+
